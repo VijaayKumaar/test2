@@ -7,7 +7,7 @@ const POST = mongoose.model("POST")
 
 
 // Route
-router.get("/allposts", requireLogin, (req, res) => {
+router.get("/allposts", (req, res) => {
     let limit = req.query.limit
     let skip = req.query.skip
     POST.find()
